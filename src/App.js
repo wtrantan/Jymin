@@ -1,12 +1,19 @@
 import './App.css';
-function App() {
+import { Routes, Route } from "react-router-dom";
+import Main from "./scenes/Main/Main";
+import Login from "./scenes/Login/Login";
+import Register from "./scenes/Register/Register";
+
+
+
+const App = () => {
   return (
-    <div className="App bg-gray-500 min-h-screen">
-      <div className="">
-        <h3 className="py-2 sm:text-lg text-lg md:text-3xl text-blue-700">jymin</h3>
-        
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Main/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
+
+    </Routes>
   );
 }
 
